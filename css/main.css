@@ -1,7 +1,12 @@
 /*default-color*/
 /*border-color*/
 /*font*/
+/*btn-hover*/
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+.hide-text {
+  opacity: 0;
+}
+
 *,
 *::before,
 *::after {
@@ -20,11 +25,10 @@ body {
 
 main {
   display: grid;
-  grid-template-areas: "nav section aside";
+  grid-template-areas: "nav section";
   grid-template-rows: 1fr;
-  grid-template-columns: minmax(260px, 18%) minmax(460px, 30%) minmax(380px, 28%);
-  grid-gap: 24px;
-  margin: 16px auto;
+  grid-template-columns: minmax(260px, 20%) 80%;
+  margin: 0 auto;
   align-items: top;
   justify-content: center;
 }
@@ -43,48 +47,56 @@ main {
   }
 }
 
-header {
-  height: 80px;
-  display: grid;
-  grid-template-areas: "header-logo header-menu header-login";
-  grid-template-columns: minmax(260px, 18%) minmax(460px, auto) minmax(380px, 28%);
-  margin: 16px auto;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 1140px) and (min-width: 768px) {
-  header {
-    grid-template-areas: "header-logo header-menu";
-    grid-template-columns: 40% 60%;
-  }
-}
-@media (max-width: 768px) {
-  header {
-    grid-template-areas: "header-logo header-menu";
-    grid-template-columns: 40% 60%;
-  }
-}
-
 nav {
   grid-area: nav;
+  border-right: 1px solid #e4e4e4;
+  padding: 16px;
+}
+
+.left-menu {
+  text-align: left;
+}
+.left-menu label {
+  color: #919191;
+  font-size: 12px;
+  display: block;
+  margin: 8px auto;
+}
+.left-menu a {
+  color: #464646;
+  text-decoration: none;
+  display: flex;
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-height: 36px;
+}
+.left-menu a:hover {
+  color: #0261fa;
+  background: #eef9ff;
+  fill: #eef9ff;
+}
+.left-menu a img {
+  margin-inline-end: 8px;
+}
+.left-menu a img:hover {
+  fill: #eef9ff;
 }
 
 section {
-  margin: 0 auto 32px auto;
+  margin: 0 auto;
   justify-content: center;
   width: 100%;
   grid-area: section;
 }
 
-aside {
-  grid-area: aside;
+.main-section {
+  background: #f4f5f9;
 }
 
 footer {
   background: rgb(72, 96, 163);
   color: white;
   padding-block: 16px;
-  margin-top: 30px;
 }
 footer .footer-container {
   display: flex;
@@ -151,38 +163,91 @@ footer .footer-container p.footer-copyright {
 }
 
 .main-container {
-  border: 1px solid #dddddd;
   border-radius: 20px;
   text-align: left;
-  padding: 0 18px;
+  background: white;
+  margin: 24px 32px;
+  display: flex;
+  flex-direction: column;
 }
 .main-container h1 {
-  color: rgb(72, 96, 163);
+  color: #464646;
+  margin: 0 30px;
+  padding-block: 24px;
   display: flex;
-  justify-content: flex-start;
 }
 .main-container h1 span {
   margin-left: auto;
   font-size: 14px;
 }
-.main-container p label {
-  display: block;
-}
 
 .sub-container {
-  background: #F3F7F9;
-  border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 16px;
+  margin: 0 30px;
+  display: flex;
+  flex-direction: row;
+}
+.sub-container article {
+  flex: 1;
+}
+.sub-container p {
+  display: flex;
+  align-items: center;
+}
+.sub-container p label {
+  color: #919191;
+  flex-basis: 100px;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 p {
-  color: #757A70;
+  color: #464646;
+}
+
+.btn-edit {
+  border-radius: 18px;
+  border: 1px solid #e1e3e1;
+  font-size: 12px !important;
+  font-weight: bold;
+  padding: 4px 12px;
+  margin: 0 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.btn-edit img {
+  margin: 0 4px;
+}
+.btn-edit:hover {
+  background: #f4f4f5;
+}
+
+.header-menu {
+  background: white;
+  display: flex;
+  justify-content: right;
+  padding: 0 28px;
+  align-items: center;
+  min-height: 48px;
+  border-bottom: 1px solid #e4e4e4;
+}
+.header-menu .ic-login {
+  cursor: pointer;
+  margin-inline: 4px;
+}
+.header-menu .ic-login img {
+  width: 24px;
+  height: 24px;
+}
+.header-menu .ic-news-board {
+  margin-inline: 4px;
+  cursor: pointer;
 }
 
 .header-logo {
   grid-area: header-logo;
   text-align: left;
+  margin: 20px auto;
 }
 @media (max-width: 1140px) and (min-width: 768px) {
   .header-logo {
@@ -201,73 +266,6 @@ p {
   margin: 0 8px 0 0;
 }
 
-.header-menu {
-  grid-area: header-menu;
-  text-align: center;
-}
-.header-menu .desktop-menu {
-  border-radius: 40px;
-  border: 1px solid #dddddd;
-  background: #F3F7F9;
-  min-height: 64px;
-  align-content: center;
-  display: block;
-  padding-inline: 18px;
-  padding-block: 7px;
-  white-space: nowrap;
-  width: fit-content;
-}
-@media (max-width: 1140px) and (min-width: 768px) {
-  .header-menu .desktop-menu {
-    display: none;
-  }
-}
-@media (max-width: 768px) {
-  .header-menu .desktop-menu {
-    display: none;
-  }
-}
-.header-menu .desktop-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.header-menu .desktop-menu ul li {
-  font-weight: bold;
-  display: inline-block;
-  align-content: center;
-}
-.header-menu .desktop-menu ul li a {
-  color: black;
-  padding: 10px 18px;
-  font-size: 20px;
-  min-height: 50px;
-  display: block;
-  text-decoration: none;
-}
-.header-menu .desktop-menu ul li a:hover {
-  color: white;
-}
-.header-menu .desktop-menu ul li:hover {
-  border-radius: 40px;
-  border: 1px solid #dddddd;
-  background: rgb(72, 96, 163);
-  cursor: pointer;
-  color: white;
-}
-.header-menu .desktop-menu ul li.hm-active {
-  border-radius: 40px;
-  border: 1px solid #dddddd;
-  background: rgb(72, 96, 163);
-  cursor: pointer;
-}
-.header-menu .desktop-menu ul li.hm-active:hover {
-  background: rgba(72, 96, 163, 0.8) !important;
-}
-.header-menu .desktop-menu ul li.hm-active a {
-  color: white !important;
-}
-
 .header-login {
   grid-area: header-login;
   text-align: right;
@@ -284,7 +282,7 @@ p {
 }
 .header-login a {
   border-radius: 40px;
-  border: 1px solid #dddddd;
+  border: 1px solid #e4e4e4;
   background: rgb(72, 96, 163);
   color: white;
   text-decoration: none;
@@ -375,17 +373,18 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #f9f9f9;
 }
 .menu-wrap .menu > div {
   background: #f9f9f9;
-  border-radius: 50%;
   width: 300vw;
-  height: 300vw;
+  height: 100%;
   display: flex;
   flex: none;
   align-items: center;
   justify-content: center;
   transform: scale(0);
+  border-radius: 50%;
   transition: all 0.4s ease;
 }
 .menu-wrap .menu > div > div {
@@ -394,6 +393,10 @@ p {
   max-height: 100vh;
   opacity: 0;
   transition: opacity 0.4s ease;
+}
+.menu-wrap .menu > div > div > ul {
+  margin: 0;
+  padding: 0;
 }
 .menu-wrap .menu > div > div > ul > li {
   list-style: none;
@@ -427,6 +430,7 @@ p {
 
 .menu-wrap .toggler:checked ~ .menu > div {
   transform: scale(1);
+  border-radius: 0;
   transition-duration: 0.75s;
 }
 

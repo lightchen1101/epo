@@ -9,117 +9,78 @@
 </head>
 
 <body>
-<header>
-	<div class="header-logo" ><img src="images/aca-logo.svg">教務資訊服務網</div>
-	<div class="header-menu">
-		<div class="menu-wrap">
-			<input type="checkbox" class="toggler">
-			<div class="hamburger"><div></div></div>
-			<div class="menu">
-			  <div>
-				<div>
-				  <ul>
-					<li class="hm-active"><a href="#">個人資訊</a></li>
-					<li><a href="#">課程相關</a></li>
-					<li><a href="#">助教相關</a></li>
-					<li><a href="#">最新消息</a></li>
-				  </ul>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		<div class="desktop-menu">
-		<ul>
-			<li class="hm-active"><a href="#">個人資訊</a></li>
-			<li><a href="#">課程相關</a></li>
-			<li><a href="#">助教相關</a></li>
-			<li><a href="#">最新消息</a></li>
-		</ul>
-		</div>
-	</div>
-	<div class="header-login">
-		<a href="#">登出</a>
-	</div>
-</header>
 <main>
 	<nav>
+		<div class="header-logo" ><img src="images/aca-logo.svg">教務資訊服務網</div>
+		<div class="left-menu">
+			<label>個人資訊</label>
+			<a href="#"><img src="images/ic-personal.svg">基本資料</a>
+			<a href="#"><img src="images/ic-teacher.svg"> 導師資訊</a>
+			<label>學習歷程</label>
+			<a href="#"><img src="images/ic-coursemap.svg"> 課程地圖</a>
+			<a href="#"><img src="images/ic-footprints.svg"> 學習足跡</a>
+			<a href="#"><img src="images/ic-classgrid.svg"> 修課總覽</a>
+			<label>活動經歷</label>
+			<a href="#"><img src="images/ic-societies.svg">社團經歷</a>
+			<a href="#"><img src="images/ic-cup.svg"> 競賽成果</a>
+			<a href="#"><img src="images/ic-services.svg"> 服務學習</a>
+		</div>
+	</nav>
+
+	<section class="main-section">
+		<div class="header-menu">
+			<div class="ic-news-board"><img src="images/ic-news-board.svg"></div>
+			<div class="ic-login"><img src="images/ic-personal.svg"></div>
+		</div>
 		<div class="main-container">
 			<h1>基本資料</h1>
 			<div class="sub-container">
-				<p><label>學號</label>學號</p>
-				<p><label>身分證號</label>身分證號</p>
-				<p><label>姓名</label>姓名</p>
-				<p><label>英文姓名</label>英文姓名</p>
-				<p><label>出生日期</label>出生日期</p>
-				<p><label>系所</label>系所</p>
-				<p><label>年級</label>年級</p>
-			</div>
-			<h1>身份</h1>
-			<div class="sub-container">
-				<p><label></label>入學身分別</p>
-				<p><label></label>在校狀態</p>
-				<p><label></label>是否為延修生</p>
-				<p><label></label>原住民族籍</p>
-				<p><label></label>國籍</p>
-				<p><label></label>入學前學校</p>
-				<p><label></label>異動碼</p>
-				<p><label></label>異動學期</p>
+			<article>
+				<p><label>姓名</label>陳虎吉</p>
+				<p><label>英文姓名</label>CHEN,WU-GI<span class="btn-edit">修改<img src="images/ic-edit.svg"></span></p>
+				<p><label>學號</label>B09902000</p>
+				<p><label>身分證號</label>A123456777</p>
+				<p><label>出生日期</label>2019/04/02</p>
+				<p><label>系所</label>1011 中文系國際班</p>
+				<p><label>年級</label>4年級</p>
+				<p><label>在校狀態</label>在校<span class="btn-edit">列印在校證明<img src="images/ic-edit.svg"></span></p>
+			</article>
+			<article>
+				<p><label>異動碼</label>B 休學生</p>
+				<p><label>異動學期</label>112</p>
+				<p><label>是否為延修生</label>否</p>
+				<p><label>入學身分別</label>14  本國生  個人申請入學生</p>
+				<p><label>入學前學校</label>漏列學校或不屬上列學歷範圍者</p>
+				<p><label>原住民族籍</label>無</p>
+				<p><label>國籍</label>114 韓國</p>
+			</article>
 			</div>
 		</div>
-	</nav>
-	<section>
 		<div class="main-container">
-			<h1>學生通訊資料 <span>修改通訊資料</span></h1>
+			<h1>學生通訊資料 <span class="btn-edit">修改<img src="images/ic-edit.svg"></span></h1>
 			<div class="sub-container">
-				<p><label>行動電話1</label>行動電話1</p>
-				<p><label>行動電話2</label>行動電話2</p>
-				<p><label>電話</label>電話</p>
-				<p><label>電子郵件</label>電子郵件</p>
-				<p><label>戶籍地址</label>戶籍地址</p>
-				<p><label>通訊地址</label>通訊地址</p>
+			<article>
+				<p><label>行動電話1</label>0912345678</p>
+				<p><label class="hide-text">行動電話2</label>0912345678</p>
+				<p><label class="hide-text">電話</label>(02)2362-7651</p>
+				<p><label>電子郵件</label>aaaa@gamil.com</p>
+				<p><label>戶籍地址</label>10617台北市大安區羅斯福路四段1號</p>
+				<p><label>通訊地址</label>10617台北市大安區羅斯福路四段1號</p>
+			</article>
 			</div>
 			<h1>家長通訊資料</h1>
 			<div class="sub-container">
+			<article>
 				<p><label>家長姓名</label>家長姓名</p>
 				<p><label>聯絡電話</label>聯絡電話</p>
 				<p><label>行動電話</label>行動電話</p>
 				<p><label>電子郵件</label>電子郵件</p>
 				<p><label>聯絡地址</label>聯絡地址</p>
+			</article>
 			</div>
 		</div>
 	</section>
-	<aside>
-		<div class="main-container">
-			<h1>轉系紀錄</h1>
-			<div class="sub-container">
-				<p><label>轉系學期</label>轉系學期</p>
-				<p><label>轉系前系級</label>轉系前系級</p>
-			</div>
-			<h1>退學紀錄</h1>
-			<div class="sub-container">
-				<p><label>退學原因</label>退學原因</p>
-			</div>
-			<h1>修學紀錄</h1>
-			<div class="sub-container">
-				<table>
-					<tr>
-						<td>學年度</td>
-						<td>原因</td>
-						<td>時長</td>
-					</tr>
-				</table>
-			</div>
-			<h1>班級導師資訊</h1>
-			<div>109 110 111 112</div>
-			<div class="sub-container">
-				<p><label>學生系級</label>學生系級</p>
-				<p><label>所屬系所</label>所屬系所</p>
-				<p><label>導師姓名</label>導師姓名</p>
-				<p><label>導師信箱</label>導師信箱</p>
-				<p><label>導師電話</label>導師電話</p>
-			</div>
-		</div>
-	</aside>
+	
 </main>
 <footer>
 	<div class="footer-container">
@@ -128,7 +89,7 @@
 		<h3>教務處首頁</h3>
 	</div>
 	<div class="footer-container">
-		<p class="footer-copyright">Copyright © 2023 國立臺灣大學教務處 Office of Academic Affairs, National Taiwan University</p>
+		<p class="footer-copyright">Copyright © 2024 國立臺灣大學教務處 Office of Academic Affairs, National Taiwan University</p>
 		<p class="footer-policy">用戶協議</p>
 		<p class="footer-policy">隱私權保護政策</p>
 	</div>

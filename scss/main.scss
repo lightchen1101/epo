@@ -21,9 +21,9 @@ body {
 main {
   display: grid;
 	grid-template-areas:
-    "nav section aside";
+    "nav section";
 	grid-template-rows:1fr;
-	grid-template-columns: minmax(260px, 18%) minmax(460px, 30%) minmax(380px, 28%);
+	grid-template-columns: minmax(260px, 20%) 80%;
   @include tablet{
     display: flex;
     flex-direction: column;
@@ -34,48 +34,57 @@ main {
     flex-direction: column;
     margin:0 16px;
   }
-	grid-gap: 24px;
-  margin:16px auto;
+  margin:0 auto;
   align-items: top;
   justify-content: center;
 }
-header{
-  height:80px;
-  display: grid;
-	grid-template-areas: 
-    "header-logo header-menu header-login";
-  grid-template-columns:minmax(260px, 18%) minmax(460px, auto) minmax(380px, 28%);
-  @include tablet{
-    grid-template-areas: 
-    "header-logo header-menu";
-    grid-template-columns:40% 60%;
-  }
-  @include phone{
-    grid-template-areas: 
-    "header-logo header-menu";
-    grid-template-columns:40% 60%;
-  }
-  margin:16px auto;
-  justify-content: center;
-  align-items: center;
-}
+
 nav{
   grid-area: nav;
+  border-right:1px solid $main-border-color;
+  padding:16px;
+}
+.left-menu{
+  text-align:left;
+  label{
+    color:$sub-color;
+    font-size:12px;
+    display:block;
+    margin:8px auto;
+  }
+  a{
+    color:$main-font-color;
+    text-decoration:none;
+    display:flex;
+    border-radius:8px;
+    padding:8px 16px;
+    min-height:36px;
+    &:hover{
+      color:$active-font-color;
+      background:$main-hover-bg-color;
+      fill:$main-hover-bg-color;
+    }
+    img{
+      margin-inline-end:8px;
+      &:hover{
+        fill:$main-hover-bg-color;
+      }
+    }
+  }
 }
 section{
-  margin:0 auto 32px auto;
+  margin:0 auto;
   justify-content:center;
   width:100%;
   grid-area:section; 
 }
-aside{
-  grid-area: aside;
+.main-section{
+  background:$sub-bg-color;
 }
 footer{
   background:$main-color;
   color: white;
   padding-block: 16px;
-  margin-top:30px;
   .footer-container{
     display:flex;
     justify-content:flex-end;
@@ -133,33 +142,80 @@ footer{
   }
 }
 .main-container{
-  border:1px solid $main-border-color;
   border-radius:20px;
   text-align: left;
-  padding:0 18px;
+  background: white;
+  margin:24px 32px;
+  display:flex;
+  flex-direction:column;
   h1{
-    color:$main-color;
-    display: flex;
-    justify-content:flex-start;
+    color:$main-font-color;
+    margin:0 30px;
+    padding-block:24px;
+    display:flex;
     span{
       margin-left:auto;
       font-size: 14px;
     }
   }
+}
+.sub-container{
+  margin:0 30px;
+  display:flex;
+  flex-direction:row;
+  article{
+    flex:1;
+  }
   p{
+    display:flex;
+    align-items:center;    
     label{
-      display: block;
+      color:$label-font-color;
+      flex-basis:100px;
+      flex-grow:0;
+      flex-shrink:0;
     }
   }
 }
-.sub-container{
-  background:$sub-color;
-  border-radius:8px;
-  padding:16px;
-  margin-bottom:16px;
-}
 p{color:$main-font-color;}
-
+.btn-edit{
+  border-radius:18px;
+  border:1px solid $btn-border-color;
+  font-size:$btn-font-size !important;
+  font-weight:bold;
+  padding:4px 12px;
+  margin:0 12px;
+  display:flex;
+  align-items:center;
+  cursor:pointer;
+  img{
+    margin:0 4px;
+  }
+  &:hover{
+    background:$btn-hover-color;
+  }
+}
+.header-menu{
+  background:white;
+  display:flex;
+  justify-content:right;
+  padding:0 28px;
+  align-items: center;
+  min-height: 48px;
+  border-bottom: 1px solid $main-border-color;
+  .ic-login{
+    cursor: pointer;
+    margin-inline:4px;
+    img{
+      width:24px;
+      height:24px;
+    }
+  }
+  .ic-news-board{
+    margin-inline:4px;
+    cursor: pointer;
+  }
+}
 @mixin headerbtn{
   border-radius:40px;
   border:1px solid $main-border-color;
@@ -168,6 +224,7 @@ p{color:$main-font-color;}
 .header-logo{
   grid-area: header-logo;
   text-align:left;
+  margin:20px auto;
   @include tablet{
     text-align:left;
     margin-inline-start: 16px;
@@ -181,64 +238,7 @@ p{color:$main-font-color;}
     margin:0 8px 0 0;
   }
 }
-.header-menu{
-  grid-area: header-menu;
-  text-align:center;
-  .desktop-menu{
-    border-radius:40px;
-    border:1px solid $main-border-color;
-    background:$sub-color;
-    min-height:64px;
-    align-content: center;
-    display:block;
-    padding-inline:18px;
-    padding-block:7px;
-    white-space: nowrap;
-    width: fit-content;
-    @include tablet{
-      display:none;
-    }
-    @include phone{
-      display:none;
-    }
-    ul{
-      list-style:none;
-      margin:0;
-      padding:0;
-      li{
-        font-weight: bold;
-        display:inline-block;
-        align-content: center;
-        a{
-          color:black;
-          padding:10px 18px;
-          font-size: 20px;
-          min-height:50px;
-          display:block;
-          text-decoration: none;
-          &:hover{
-            color:white;
-          }
-        }
-        &:hover{
-          @include headerbtn;
-          cursor:pointer;
-          color:white;
-        }
-        &.hm-active{
-          @include headerbtn;
-          cursor:pointer;
-          &:hover{
-            background:rgba(72,96,163,.8) !important;
-           }
-          a{
-            color:white !important;
-          }
-        }
-      }
-    }
-  }
-}
+
 .header-login{
   grid-area: header-login;
   text-align:right;
@@ -261,7 +261,7 @@ p{color:$main-font-color;}
     }
   }
 }
-.hide{display: none;}
+.hide{display:none;}
 .menu-wrap {
   position: fixed;
   top:50px;
@@ -332,16 +332,17 @@ p{color:$main-font-color;}
     display: flex;
     align-items: center;
     justify-content: center;
+    background:#f9f9f9;
     >div {
       background:#f9f9f9;
-      border-radius: 50%;
       width: 300vw;
-      height: 300vw;
+      height: 100%;
       display: flex;
       flex: none;
       align-items: center;
       justify-content: center;
       transform: scale(0);
+      border-radius:50%;
       transition: all 0.4s ease;
       >div {
         text-align: center;
@@ -350,6 +351,8 @@ p{color:$main-font-color;}
         opacity: 0;
         transition: opacity 0.4s ease;
         >ul{
+          margin: 0;
+          padding: 0;
           >li{
             list-style: none;
             color:$main-color;
@@ -382,6 +385,7 @@ p{color:$main-font-color;}
 }
 .menu-wrap .toggler:checked ~ .menu > div {
   transform: scale(1);
+  border-radius:0;
   transition-duration:$menu-speed;
 }
 .menu-wrap .toggler:checked ~ .menu > div > div {

@@ -1,11 +1,21 @@
 /*default-color*/
 $main-color:rgba(72,96,163,1);
-$sub-color:#F3F7F9;
-
+$sub-color:#919191;
+$sub-bg-color:#f4f5f9;
+$main-hover-bg-color:#eef9ff;
 /*border-color*/
-$main-border-color:#dddddd;
+$main-border-color:#e4e4e4;
+$btn-border-color:#e1e3e1;
 
 /*font*/
-$main-font-color:#757A70;
+$main-font-color:#464646;
+$active-font-color:#0261fa;
+$label-font-color:#919191;
+$btn-font-size:12px;
+
+/*btn-hover*/
+$btn-hover-color:#f4f4f5;
 
 $menu-speed:0.75s;
+
+.hide-text{opacity:0;}
