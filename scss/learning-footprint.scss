@@ -1,0 +1,90 @@
+@import "basic-info.scss";
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  tr {
+    text-decoration: none;
+    transition: $menu-speed ease-out;
+    overflow: hidden;
+  }
+
+  tr.active-row {
+    background-color: #F4F4F5;
+  }
+
+  .table-expand-row {
+    display: none;
+    font-size: 12px;
+  }
+
+  th {
+    border-bottom: 1px solid $main-border-color;
+    color: $label-font-color;
+    padding: 12px 0;
+  }
+
+  td {
+    @extend th;
+    color: $table-font-color;
+    padding: 12px 0;
+  }
+
+  .table-expand-td {
+    padding: 20px 0 !important;
+    border-bottom: 1px solid $main-border-color;
+
+    p {
+      margin: 0 15px !important;
+      color: $main-font-color !important;
+
+    }
+
+    .table-detail-title {
+      color: $table-detail-color !important;
+    }
+  }
+
+  .table-expand-td:first-child {
+    border-left: 1px solid $main-border-color;
+  }
+
+  .table-expand-td:last-child {
+    border-right: 1px solid $main-border-color;
+  }
+
+
+
+  .table-column1 {
+    width: 30%;
+  }
+
+  .table-column2 {
+    width: 70%;
+  }
+
+  .table-column3 {
+    width: 40%;
+  }
+
+  .table-column4 {
+    width: 30%;
+  }
+
+  .table-column5 {
+    width: 15%;
+  }
+
+  .table-column6 {
+    width: 40%;
+  }
+
+  .expand-btn {
+    width: 5%;
+  }
+
+  .expand-btn:hover {
+    cursor: pointer;
+  }
+}

@@ -70,6 +70,7 @@ nav {
       color: $active-font-color;
       background: $main-hover-bg-color;
       fill: $main-hover-bg-color;
+
     }
 
     img {
@@ -230,126 +231,8 @@ footer {
     }
   }
 
-  table {
-    width: 100%;
-
-    tr {
-      text-decoration: none;
-    }
-
-    th {
-      border-bottom: 1px solid $main-border-color;
-      color: $label-font-color;
-      padding: 12px 0;
-    }
-
-    td {
-      @extend th;
-      color: $table-font-color;
-    }
-  }
 }
 
-.expand-container {
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  background-color: $sub-bg-color;
-  margin: 24px 32px;
-
-  h1 {
-    display: block;
-    padding-block: 24px;
-    display: inline-block;
-
-    p {
-      color: $label-font-color;
-      font-size: 14px;
-      margin: 0;
-    }
-
-  }
-
-  .expand-title {
-    display: flex;
-    flex-direction: row;
-    border-radius: 20px;
-    justify-content: space-between;
-    background: $sub-bg-color;
-
-    h1 {
-      display: block;
-      display: inline-block;
-
-      p {
-        color: $label-font-color;
-        font-size: 14px;
-        margin: 0;
-      }
-
-    }
-
-    a {}
-  }
-
-  .expand-sub-container {
-    margin: 0 30px;
-
-    .expand-content {
-      p {
-        font-weight: bold;
-        margin: 0;
-      }
-
-      .expand-table-container {
-        display: flex;
-        flex-direction: row;
-        border-bottom: 1px solid $main-border-color;
-
-        p {
-          display: flex;
-          align-items: center;
-          width: 30%;
-          justify-content: center;
-        }
-
-        .expand-table {
-          width: 100%;
-
-          .table-course {
-            width: 35%;
-          }
-
-          th {
-            color: $label-font-color;
-            padding: 12px 0;
-            font-weight: 500;
-          }
-
-          td {
-            @extend th;
-            border-top: 1px solid $main-border-color;
-            color: $table-font-color;
-          }
-        }
-
-        ul {
-          list-style: none;
-          padding-left: 0;
-
-          li {
-            color: $table-font-color;
-            font-weight: 500;
-          }
-        }
-      }
-      .expand-table-container:last-child {
-        border-bottom: none;
-      }
-    }
-  }
-
-}
 
 p {
   color: $main-font-color;

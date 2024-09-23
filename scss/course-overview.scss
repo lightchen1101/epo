@@ -1,0 +1,50 @@
+@import "basic-info.scss";
+@import "course-map.scss";
+
+.expand-sub-container {
+  //display: block !important;
+
+  .expand-table {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+
+    .table-course {
+      width: 15%;
+    }
+
+    .table-class {
+      width: 10%;
+    }
+
+    .table-credit {
+      width: 10%;
+    }
+
+    .table-name {
+      width: 55%;
+    }
+
+    .table-info {
+      width: 10%;
+    }
+
+    .btn-edit {
+      width: max-content;
+      margin: 0;
+    }
+
+    tr {
+      padding: 12px 0;
+    }
+
+    th {
+      border-bottom: 1px solid $main-border-color;
+    }
+
+    td {
+      border-bottom: 1px solid $main-border-color;
+    }
+
+  }
+
+}

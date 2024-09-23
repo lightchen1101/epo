@@ -219,98 +219,6 @@ footer .footer-container p.footer-copyright {
 .sub-container ul li p {
   margin: 8px 0;
 }
-.sub-container table {
-  width: 100%;
-}
-.sub-container table tr {
-  text-decoration: none;
-}
-.sub-container table th, .sub-container table .expand-container .expand-sub-container .expand-content .expand-table-container .expand-table td, .expand-container .expand-sub-container .expand-content .expand-table-container .expand-table .sub-container table td, .sub-container table td {
-  border-bottom: 1px solid #e4e4e4;
-  color: #919191;
-  padding: 12px 0;
-}
-.sub-container table td {
-  color: #09090B;
-}
-
-.expand-container {
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  background-color: #f4f5f9;
-  margin: 24px 32px;
-}
-.expand-container h1 {
-  display: block;
-  padding-block: 24px;
-  display: inline-block;
-}
-.expand-container h1 p {
-  color: #919191;
-  font-size: 14px;
-  margin: 0;
-}
-.expand-container .expand-title {
-  display: flex;
-  flex-direction: row;
-  border-radius: 20px;
-  justify-content: space-between;
-  background: #f4f5f9;
-}
-.expand-container .expand-title h1 {
-  display: block;
-  display: inline-block;
-}
-.expand-container .expand-title h1 p {
-  color: #919191;
-  font-size: 14px;
-  margin: 0;
-}
-.expand-container .expand-sub-container {
-  margin: 0 30px;
-}
-.expand-container .expand-sub-container .expand-content p {
-  font-weight: bold;
-  margin: 0;
-}
-.expand-container .expand-sub-container .expand-content .expand-table-container {
-  display: flex;
-  flex-direction: row;
-  border-bottom: 1px solid #e4e4e4;
-}
-.expand-container .expand-sub-container .expand-content .expand-table-container p {
-  display: flex;
-  align-items: center;
-  width: 30%;
-  justify-content: center;
-}
-.expand-container .expand-sub-container .expand-content .expand-table-container .expand-table {
-  width: 100%;
-}
-.expand-container .expand-sub-container .expand-content .expand-table-container .expand-table .table-course {
-  width: 35%;
-}
-.expand-container .expand-sub-container .expand-content .expand-table-container .expand-table th, .expand-container .expand-sub-container .expand-content .expand-table-container .expand-table td {
-  color: #919191;
-  padding: 12px 0;
-  font-weight: 500;
-}
-.expand-container .expand-sub-container .expand-content .expand-table-container .expand-table td {
-  border-top: 1px solid #e4e4e4;
-  color: #09090B;
-}
-.expand-container .expand-sub-container .expand-content .expand-table-container ul {
-  list-style: none;
-  padding-left: 0;
-}
-.expand-container .expand-sub-container .expand-content .expand-table-container ul li {
-  color: #09090B;
-  font-weight: 500;
-}
-.expand-container .expand-sub-container .expand-content .expand-table-container:last-child {
-  border-bottom: none;
-}
 
 p {
   color: #464646;
@@ -557,4 +465,4 @@ p {
 .menu-wrap .toggler:checked ~ .menu > div > div {
   opacity: 1;
   transition: opacity 0.4s ease 0.4s;
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=basic-info.css.map */
