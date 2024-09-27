@@ -67,9 +67,9 @@ nav {
     min-height: 36px;
 
     &:hover {
-      color: $active-font-color;
-      background: $main-hover-bg-color;
-      fill: $main-hover-bg-color;
+      //color: $active-font-color;
+      background: #F4F4F5;
+      //fill: $main-hover-bg-color;
 
     }
 
@@ -80,6 +80,12 @@ nav {
         fill: $main-hover-bg-color;
       }
     }
+  }
+
+  a.active {
+    color: $active-font-color;
+    background: $main-hover-bg-color;
+    fill: $main-hover-bg-color;
   }
 }
 
@@ -344,6 +350,7 @@ p {
       ;
     }
   }
+
 }
 
 .hide {

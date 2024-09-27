@@ -71,14 +71,17 @@ nav {
   min-height: 36px;
 }
 .left-menu a:hover {
-  color: #0261fa;
-  background: #eef9ff;
-  fill: #eef9ff;
+  background: #F4F4F5;
 }
 .left-menu a img {
   margin-inline-end: 8px;
 }
 .left-menu a img:hover {
+  fill: #eef9ff;
+}
+.left-menu a.active {
+  color: #0261fa;
+  background: #eef9ff;
   fill: #eef9ff;
 }
 
