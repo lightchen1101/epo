@@ -17,12 +17,14 @@ table {
   .table-expand-row {
     display: none;
     font-size: 12px;
+    width: 100%;
   }
 
   th {
     border-bottom: 1px solid $main-border-color;
     color: $label-font-color;
     padding: 12px 0;
+    font-weight: 400;
   }
 
   td {
@@ -34,6 +36,7 @@ table {
   .table-expand-td {
     padding: 20px 0 !important;
     border-bottom: 1px solid $main-border-color;
+    table-layout: fixed;
 
     p {
       margin: 0 15px !important;
@@ -58,6 +61,7 @@ table {
 
   .table-column1 {
     width: 30%;
+    padding-left: 15px;
   }
 
   .table-column2 {
@@ -79,6 +83,23 @@ table {
   .table-column6 {
     width: 40%;
   }
+
+  .table-column7{
+    width: 15%;
+    padding-left: 15px;
+  }
+
+  .table-column8{
+    width: 20%;
+  }
+
+  .table-column9{
+    width: 10%;
+  }
+  .table-phone-expand{
+    padding-left: 15px;
+  }
+
 
   .expand-btn {
     width: 5%;

@@ -23,6 +23,14 @@ body {
   overflow-x: hidden;
 }
 
+.desktop {
+  display: block;
+}
+
+.phone {
+  display: none;
+}
+
 main {
   display: grid;
   grid-template-areas: "nav section";
@@ -36,14 +44,12 @@ main {
   main {
     display: flex;
     flex-direction: column;
-    margin: 0 16px;
   }
 }
 @media (max-width: 768px) {
   main {
     display: flex;
     flex-direction: column;
-    margin: 0 16px;
   }
 }
 
@@ -173,6 +179,11 @@ footer .footer-container p.footer-copyright {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  .main-container {
+    margin: 24px 16px;
+  }
+}
 .main-container h1 {
   color: #464646;
   margin: 0 30px;
@@ -180,10 +191,18 @@ footer .footer-container p.footer-copyright {
   padding-bottom: 10px;
   display: flex;
   justify-content: space-between;
+  font-weight: 500;
 }
 .main-container h1 span {
   margin-left: auto;
   font-size: 14px;
+}
+.main-container .sub-title {
+  font-size: 16px;
+  color: #71717A;
+  font-weight: 400;
+  margin: 0 30px;
+  padding-bottom: 10px;
 }
 
 .sub-container {
@@ -234,6 +253,25 @@ p {
 .btn-semester a {
   text-decoration: none;
   color: #464646;
+}
+.btn-semester .btn-semester-num {
+  border-radius: 18px;
+  border: 1px solid #e1e3e1;
+  font-size: 12px !important;
+  padding: 4px 12px;
+  margin: 0 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.btn-semester .btn-semester-num:hover {
+  background: #f4f4f5;
+}
+@media (max-width: 768px) {
+  .btn-semester .btn-semester-num {
+    padding: 2px 8px;
+    margin: 0 5px;
+  }
 }
 
 .btn-edit {
@@ -468,4 +506,4 @@ p {
 .menu-wrap .toggler:checked ~ .menu > div > div {
   opacity: 1;
   transition: opacity 0.4s ease 0.4s;
-}/*# sourceMappingURL=basic-info.css.map */
+}

@@ -1,6 +1,5 @@
 @import "basic-info.scss";
 
-
 table {
   width: 100%;
 
@@ -104,6 +103,7 @@ table {
             @extend th;
             border-top: 1px solid $main-border-color;
             color: $table-font-color;
+            font-weight: 400;
           }
         }
 
@@ -113,12 +113,33 @@ table {
 
           li {
             color: $table-font-color;
-            font-weight: 500;
+            font-weight: 400;
           }
         }
       }
       .expand-table-container:last-child {
         border-bottom: none;
+      }
+      .expand-table-container-column{
+        @extend .expand-table-container;
+        flex-direction: column;
+        padding-bottom: 12px;
+        p{
+          width:100%;
+          padding:12px 0;
+        }
+        ul{
+          margin:0;
+          li{
+           margin: 6px 4px;
+           font-weight: 400;
+          }
+        }
+        
+      }
+      .expand-table-container-column:last-child{
+        border-bottom: none;
+        margin-bottom: 24px;
       }
     }
   }
